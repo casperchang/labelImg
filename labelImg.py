@@ -51,6 +51,11 @@ from libs.create_ml_io import JSON_EXT
 from libs.ustr import ustr
 from libs.hashableQListWidgetItem import HashableQListWidgetItem
 
+'''
+    use note:
+    'a': previmage 'w': create new box, 's': save image, 'd': next_image
+'''
+
 __appname__ = 'labelImg'
 
 
@@ -235,8 +240,8 @@ class MainWindow(QMainWindow, WindowMixin):
                         'space', 'verify', get_str('verifyImgDetail'))
 
         save = action(get_str('save'), self.save_file,
-                      'Ctrl+S', 'save', get_str('saveDetail'), enabled=False)
-
+                      # 'Ctrl+S', 'save', getStr('saveDetail'), enabled=False)
+                      's', 'save', getStr('saveDetail'), enabled=False)
         def get_format_meta(format):
             """
             returns a tuple containing (title, icon_name) of the selected format

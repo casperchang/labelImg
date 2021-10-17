@@ -1,3 +1,10 @@
+My personal forked and modification version of the LableImg for my DL object detection projects.
+
+Ignored the data folder (predefined_classes.txt) for different projects.
+
+for issue: No module named 'libs.resources'
+run: pyrcc5 -o libs/resources.py resources.qrc
+
 LabelImg
 ========
 
